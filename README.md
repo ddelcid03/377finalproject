@@ -13,7 +13,27 @@ Target Browsers: The application supports all modern desktop browsers (Chrome, F
 
 This manual is for developers who will be working on the SpaceFlight project after the initial development phase. It will guide you through setting up the application, running it on a server, running tests, and interacting with the API.
 
-Known Bugs and Future Development Roadmap
+
+## 1. Setting Up the Application Locally
+
+### Prerequisites
+Before you begin, make sure you have the following installed on your machine:
+- **Node.js** (version 16 or higher)
+- **npm** (Node Package Manager)
+- A GitHub account and access to the repository.
+
+### 1.1 Cloning the Repository
+
+1. Clone the SpaceFlight project repository to your local machine:
+   ```bash
+   git clone https://github.com/yourusername/spaceflight.git
+
+2. Install dependencies with (npm install):
+   - express
+   - supabase
+  
+  
+
 
 Known Bugs:
   - Duplicate Articles: The application may sometimes save duplicate articles if the same article is added more than once.
