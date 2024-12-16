@@ -6,5 +6,3 @@ Description: The Spaceflight News project is a web application designed to provi
 
 Target Browsers: The application supports all modern desktop browsers (Chrome, Firefox, Safari, Edge) and mobile browsers on iOS and Android.
 
-
-
