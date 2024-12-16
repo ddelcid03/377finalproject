@@ -5,22 +5,23 @@ const insertArticle = async () => {
     {
       title: 'SpaceX Launches New Starship',
       url: 'https://spacex.com/new-starship',
-      description: 'SpaceX successfully launches its latest Starship rocket.',
     },
     {
       title: 'NASA Announces Artemis Updates',
       url: 'https://nasa.gov/artemis-updates',
-      description: 'NASA reveals new updates about the Artemis lunar program.',
     },
   ];
 
   for (const article of articles) {
+    console.log('Inserting article:', article); // Debugging log
+
     const { data, error } = await supabase
-      .from('Articles')
-      .insert([{ title: article.title, url: article.url, description: article.description }]);
+      .from('articles') // Use lowercase "articles" here
+      .insert([{ title: article.title, url: article.url }]);
 
     if (error) {
-      console.error('Error inserting article:', error);
+      // Log the full error object for more details
+      console.error('Error inserting article:', error.message, error);
     } else {
       console.log('Inserted article:', data);
     }
