@@ -9,7 +9,7 @@ Target Browsers: The application supports all modern desktop browsers (Chrome, F
 
 
 
-Developer Manual:
+**Developer Manual:**
 
 This manual is for developers who will be working on the SpaceFlight project after the initial development phase. It will guide you through setting up the application, running it on a server, running tests, and interacting with the API.
 
