@@ -13,14 +13,13 @@ const insertArticle = async () => {
   ];
 
   for (const article of articles) {
-    console.log('Inserting article:', article); // Debugging log
+    console.log('Inserting article:', article); 
 
     const { data, error } = await supabase
-      .from('articles') // Use lowercase "articles" here
+      .from('articles') 
       .insert([{ title: article.title, url: article.url }]);
 
     if (error) {
-      // Log the full error object for more details
       console.error('Error inserting article:', error.message, error);
     } else {
       console.log('Inserted article:', data);

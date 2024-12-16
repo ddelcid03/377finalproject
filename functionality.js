@@ -1,4 +1,3 @@
-// Fetch articles from the Spaceflight News API
 fetch('https://api.spaceflightnewsapi.net/v4/articles')
   .then(response => response.json())
   .then(data => {
@@ -11,14 +10,12 @@ fetch('https://api.spaceflightnewsapi.net/v4/articles')
       </li>
     `).join('');
     
-    // Add event listeners to all save buttons
     const saveButtons = document.querySelectorAll('.save-btn');
     saveButtons.forEach(button => {
       button.addEventListener('click', saveArticle);
     });
   });
 
-// Function to handle saving an article
 function saveArticle(event) {
   const title = event.target.getAttribute('data-title');
   const url = event.target.getAttribute('data-url');

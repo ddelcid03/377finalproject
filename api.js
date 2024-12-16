@@ -2,17 +2,15 @@ const express = require('express');
 const { supabase } = require('../config/supabase');
 const router = express.Router();
 
-// Endpoint: Fetch saved articles from the database
 router.get('/saved-articles', async (req, res) => {
   const { data, error } = await supabase.from('articles').select('*');
   if (error) return res.status(500).json({ error: error.message });
-  res.json(data);  // Send the saved articles to the frontend
+  res.json(data); 
 });
 
 
-// Endpoint: Save an article to the database
 router.post('/save-article', async (req, res) => {
-  const { title, url, description } = req.body; // Expect description as well
+  const { title, url, description } = req.body; 
   const { data, error } = await supabase.from('Articles').insert([{ title, url, description }]);
   if (error) return res.status(500).json({ error: error.message });
   res.json(data);
