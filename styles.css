@@ -120,4 +120,68 @@ body, h1, h2, p, ul {
     color: #61dafb;
     font-size: 0.9rem;
   }
+
+  /* Button Styling */
+#explore-btn {
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #4CAF50; /* Green background */
+  color: white;
+  border: 2px solid #4CAF50;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+#explore-btn:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: width 0.4s, height 0.4s, top 0.4s, left 0.4s;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Hover effect */
+#explore-btn:hover {
+  background-color: #45a049;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1); /* Button grows slightly */
+}
+
+#explore-btn:hover:before {
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+}
+
+/* Button click animation */
+#explore-btn:active {
+  transform: scale(0.98); /* Slight shrink on click */
+  background-color: #3e8e41; /* Darker green on click */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Adding transition effect for page load */
+body {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
   
