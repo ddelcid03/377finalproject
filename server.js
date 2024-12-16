@@ -9,7 +9,7 @@ app.use(express.json());
 // Use API Routes
 app.use('/api', apiRoutes);
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;  // Use the environment's PORT or 3000 as a fallback
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Server is running on port ${PORT}`);
 });
